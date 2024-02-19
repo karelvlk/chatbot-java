@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  server:
+    image: vlkkarel/karel-vlk-ai
+    ports:
+      - "9000:9000"
+    networks:
+      - mynetwork
+
+  app:
+    build: .
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
